@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
+:root{
+ --cor-preto: #000000;
+ --cor-branca: #ffffff;
+ --cor-lilas-escuro: #673AB7;
+ --cor-lilas-claro: #9575CD;
+
+ --cor-cinza-claro: #949494;
+
+ --borda: 1px solid var(--cor-lilas-claro);
+ --borda-arredondada:2px;
+
+ --tamanho-fonte-lg: 20px;
+ --tamanho-fonte-md: 16px;
+ --tamanho-fonte-sm: 14px;
+}
+
+
+/* SELETOR GLOBAL */
+*{
+    font-family: "Shadows Into Light", cursive;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*o valor total do tamanho do elemento conta tanto com espaços internos/externo e as bordas*/ 
+    outline-color: var(--cor-lilas-escuro); 
+}
+
+body{
+    background-color: var(--cor-branca); 
+}
+h1{
+    position: absolute; /*altera a posição do elemento*/
+    z-index:  -1; /**/
+    opacity: 0;
+}
+
+
+/* formulario */
+
+.estilo-formulario{
+    border: var(--borda);
+    width: 100%;
+    background-color: var(--cor-branca);
+}
+
+input{
+    width: 100%;
+    height: 35px;
+    border: var(--borda);
+    background-color: var(--cor-branca);
+
+}
+
+.formulario-botao-verde{
+
+    border-radius: var(--borda-arredondada);
+    border: none;
+    height: 35px;
+    color: var(--cor-branca);
+    font-size: var(--tamanho-fonte-sm);
+    font-weight: 600;
+}
+
+.file-upload {
+  
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+    min-height: 35px;
+    padding: 5px;
+    background-color: #9575CD;
+    color: var(--cor-preto);
+    border-radius: 5px;
+    font-weight: 600;
+    
+    
+}
+
+/* cabeçalho*/
+#cabecalho{
+    width: 100%; /*100% da janela de visualização*/
+    height: 80px;
+    background-color: #B0CA87;
+    display: flex;
+    justify-content: center;
+    /* align-items */
+    border-bottom:3.5px solid var(--cor-preto);
+    
+   
+
+}
+#cabecalho > nav{
+    width: 85%;
+    max-width: 1440px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cabecalho-acoes{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.cabecalho-acoes > a {
+    display: flex;
+    align-items: center;
+}
+
+
+.foto-perfil{
+    width: 25px;
+    height: 25px;
+    object-fit: cover; /*redimensiona a foto*/
+    object-position: center;
+    border-radius: 50%;
+    
+
+}
+.verificado{
+    width: 38px;
+}
+
+
+
+
+
+/*RESPONSIVO*/
+@media only screen and (max-width: 485px) {
+    #logo-mobile{
+        display: initial; /*voltar o valor inicial de exibição*/
+        justify-content: center;
+    }
+    #logo-desktop{
+        display: none;
+    }
+
+}
+#stories{
+    width: 23px;
+    height: 23px;
+    background-color: #B0CA87;
+}
